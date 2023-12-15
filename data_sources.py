@@ -35,3 +35,12 @@ trip_stats = FileSource(
     description="A table containing passengers' trip-related info",
     owner="jary@redhat.com",
 )
+
+test_stats = FileSource(
+    name="test_source",
+    path="s3://titanic-ml-jary/test_source.parquet",
+    s3_endpoint_override="http://s3.us-west-1.amazonaws.com",
+    event_timestamp_column="event_timestamp",
+    description="A table containing testing data - the same passenger info sans 'Survived'",
+    owner="jary@redhat.com",
+)

@@ -43,4 +43,8 @@ resource "aws_s3_object" "trip_upload" {
   source = "${path.module}/../../data/trip_source.parquet"
 }
 
-
+resource "aws_s3_object" "test_upload" {
+  bucket = aws_s3_bucket.feast_bucket.bucket
+  key    = "test_source.parquet"
+  source = "${path.module}/../../data/test_source.parquet"
+}

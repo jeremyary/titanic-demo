@@ -69,3 +69,26 @@ trip_view = FeatureView(
     source=trip_stats,
     owner="jary@redhat.com",
 )
+
+test_view = FeatureView(
+    name="test_view",
+    description="test dataset",
+    entities=[passenger],
+    ttl=timedelta(seconds=8640000000),
+    schema=[
+        Field(name="PassengerId", dtype=types.Int64),
+        Field(name="Pclass", dtype=types.Int64),
+        Field(name="Name", dtype=types.String),
+        Field(name="Sex", dtype=types.String),
+        Field(name="Age", dtype=types.Float64),
+        Field(name="SibSp", dtype=types.Int64),
+        Field(name="Parch", dtype=types.Int64),
+        Field(name="Ticket", dtype=types.String),
+        Field(name="Fare", dtype=types.Float64),
+        Field(name="Cabin", dtype=types.String),
+        Field(name="Embarked", dtype=types.String),
+    ],
+    online=True,
+    source=test_stats,
+    owner="jary@redhat.com",
+)

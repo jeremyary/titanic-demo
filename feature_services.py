@@ -8,3 +8,9 @@ omniscient_service = FeatureService(
     features=[survivors_view, demographics_view, genealogy_view, trip_view],
     owner="jary@redhat.com",
 )
+
+test_service = FeatureService(
+    name="test_service",
+    features=[test_view],
+    owner="jary@redhat.com",
+)
