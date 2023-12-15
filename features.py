@@ -66,6 +66,6 @@ trip_view = FeatureView(
         Field(name="Embarked", dtype=types.String),
     ],
     online=True,
-    source=genealogy_stats,
+    source=trip_stats,
     owner="jary@redhat.com",
 )
