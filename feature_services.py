@@ -14,3 +14,9 @@ test_service = FeatureService(
     features=[test_view],
     owner="jary@redhat.com",
 )
+
+sanitized_service = FeatureService(
+    name="sanitized_service",
+    features=[transformed_title],
+    owner="jary@redhat.com"
+)
