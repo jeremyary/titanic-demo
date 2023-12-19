@@ -15,8 +15,9 @@ test_service = FeatureService(
     owner="jary@redhat.com",
 )
 
-sanitized_service = FeatureService(
-    name="sanitized_service",
-    features=[transformed_title],
-    owner="jary@redhat.com"
-)
+# didn't quite get on-demand (see features) working...yet
+# sanitized_service = FeatureService(
+#     name="sanitized_service",
+#     features=[transformed_title],
+#     owner="jary@redhat.com"
+# )
